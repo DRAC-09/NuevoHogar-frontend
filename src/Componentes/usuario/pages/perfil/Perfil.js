@@ -40,7 +40,7 @@ export default function Perfil(props) {
           // console.log(`http://localhost:7777/cliente/actualizar/${id}`)
           // event.preventDefault();
 
-          fetch(`http://localhost:7777/cliente/actualizar/${id}`, {
+          fetch(`https://nuevo-hogar-backend.vercel.app/cliente/actualizar/${id}`, {
                method: 'PUT',
                body: JSON.stringify(usuarioForm),
                headers: {

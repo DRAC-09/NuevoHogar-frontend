@@ -11,7 +11,7 @@ const Usuario = () => {
 
 
      useEffect(() => {
-          fetch(`http://localhost:7777/cliente/${id}`, {
+          fetch(`https://nuevo-hogar-backend.vercel.app/cliente/${id}`, {
                method: 'GET',
                headers: {
                     'Accept': 'application/json',
