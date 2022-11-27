@@ -26,6 +26,22 @@ export default function Perfil(props) {
           } 
      };
 
+     useEffect(() => {
+          fetch(`https://nuevo-hogar-backend.vercel.app/cliente/${id}`, {
+               method: 'GET',
+               headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+               }
+          })
+          .then(res => res.json())
+          .then(data => {
+               setuserForm(data)
+               // setimagen(data.imagen)
+          })
+          .catch(res => console.log(res));
+     },);
+
   // Actualizacion de la informacion de la mascota y Conexion a la base de datos
      const actualizarInformacion = (event) => {
           const data = new FormData(event.currentTarget);
@@ -53,8 +69,8 @@ export default function Perfil(props) {
           .then(res => res.json())
           .then(data => {
                // console.log(data)
-               alert("Usuario actualizado con exito, Los datos se actualizaran cuando vuelva a iniciar Sesion")
-               // window.location.href = "./mascotasAdmin"; 
+               alert("Usuario actualizado con exito")
+               window.location.href = "./usuario"; 
           })
           .catch(res => console.log(res));
           event.preventDefault();
