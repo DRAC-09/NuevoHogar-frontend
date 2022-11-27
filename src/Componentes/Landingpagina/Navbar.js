@@ -43,7 +43,7 @@ function Navbar() {
       const id = JSON.parse(localStorage.getItem('user'))
       // console.log(fotoPerfil)
 
-    fetch(`http://localhost:7777/cliente/${id}`, {
+    fetch(`https://nuevo-hogar-backend.vercel.app/cliente/${id}`, {
           method: 'GET',
           headers: {
               'Accept': 'application/json',
