@@ -42,7 +42,7 @@ const Registro = () => {
         }
         // console.log(mascota)
         
-        fetch("http://localhost:7777/cliente/register", {
+        fetch("https://nuevo-hogar-backend.vercel.app/cliente/register", {
           method: 'POST',
           body: JSON.stringify(mascota),
           headers: {
