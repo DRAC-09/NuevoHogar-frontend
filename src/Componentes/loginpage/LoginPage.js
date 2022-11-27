@@ -55,7 +55,7 @@ export default function LoginPage() {
       correo: data.get('correo'),
       contrasenia: data.get('contrasenia'),
     }
-    fetch("https://nuevo-hogar-frontend.vercel.app/login", {
+    fetch("https://nuevo-hogar-backend.vercel.app/cliente/login", {
         method: 'POST',
         body: JSON.stringify(usuario),
         headers: {
