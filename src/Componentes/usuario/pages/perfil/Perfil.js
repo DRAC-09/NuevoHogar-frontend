@@ -12,6 +12,7 @@ import foto from '../../../../Fotos/account.png'
 export default function Perfil(props) {
      const user = props.user
      const [imagen, setimagen] = useState(user.fotoPerfil);
+     const [userForm, setuserForm] = useState();
      const id = JSON.parse(localStorage.getItem('user'));
 
   // Capturar Imagen y convertirla a Base64
@@ -32,14 +33,15 @@ export default function Perfil(props) {
                nombre: data.get('nombre'),
                identidad: data.get('identidad'),
                celular: data.get('celular'),
+               telefono: data.get('telefono'),
                direccion: data.get('direccion'),
                fechaNacimiento: data.get('fechaNacimiento'),
                sexo: data.get('sexo'),
                fotoPerfil: imagen
           }
-          // console.log(`http://localhost:7777/cliente/actualizar/${id}`)
           // event.preventDefault();
-
+          
+            // (`http://localhost:7777/cliente/actualizar/${id}`)
           fetch(`https://nuevo-hogar-backend.vercel.app/cliente/actualizar/${id}`, {
                method: 'PUT',
                body: JSON.stringify(usuarioForm),
