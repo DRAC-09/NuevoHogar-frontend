@@ -40,7 +40,7 @@ function Copyright(props) {
   return (
     <Typography variant="body2" color="white" align="center" {...props}>
       {'Copyright © '}
-      <Link color="inherit" href="http://localhost:3000/">
+      <Link color="inherit" href="https://nuevo-hogar-frontend.vercel.app/">
       NuevoHogar
       </Link>{' '}
       {new Date().getFullYear()}
@@ -94,7 +94,7 @@ export default function Historial() {
   };
 
   return (
-    <div className="containe-fluid div-historial" bgcolor="transparent">
+    
         <Box
           marginTop={25}
             sx={{ mt: 1 }}>
@@ -162,7 +162,6 @@ export default function Historial() {
       <Copyright sx={{ mt: 8, mb: 4 }} />
       {/* End footer */}
       </main>
-            </Box> 
-        </div>
+            </Box>
   )
 }
