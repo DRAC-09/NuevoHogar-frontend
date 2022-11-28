@@ -12,6 +12,7 @@ import CardMedia from '@mui/material/CardMedia';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Mascotas from '../pages/Mascotas';
+import './adoptarMascota.css';
 /*import Img_historial from './Img_historial';
 import Magnus from "../Fotos/Magnus.jpeg"
 import Max from "../Fotos/Max.png"
@@ -38,7 +39,7 @@ const theme = createTheme({
 
 function Copyright(props) {
   return (
-    <Typography variant="body2" color="white" align="center" {...props}>
+    <Typography variant="body2" color="black" align="center" {...props}>
       {'Copyright © '}
       <Link color="inherit" href="https://nuevo-hogar-frontend.vercel.app/">
       NuevoHogar
@@ -94,7 +95,7 @@ export default function Historial() {
   };
 
   return (
-    
+    <div className="containe-fluid div-adoptar" bgcolor="transparent">
         <Box
           marginTop={25}
             sx={{ mt: 1 }}>
@@ -163,5 +164,6 @@ export default function Historial() {
       {/* End footer */}
       </main>
             </Box>
+            </div>
   )
 }

@@ -1,0 +1,10 @@
+.div-adoptar{
+    margin-top: -0.25cm;
+    background-color: transparent;
+    height: 100vh;
+    width: "inherit";
+    background-image: url("../../Fotos/adoptar.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
