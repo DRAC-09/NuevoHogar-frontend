@@ -20,7 +20,7 @@ const Actividades = () =>{
                .then(res => res.json())
                .then(data => {
                     setactividades(data)
-                    console.log(actividades)
+                    // console.log(actividades)
                })
                .catch(res => console.log(res));
      },[]);
