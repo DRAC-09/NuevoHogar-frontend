@@ -7,7 +7,7 @@ const Mascotas = () => {
 
      useEffect(() => {
           // Obtenermos las mascotas de la base de datos
-          fetch("http://localhost:7777/mascota", {
+          fetch("https://nuevo-hogar-backend.vercel.app/mascota", {
                method: 'GET',
                headers: {
                     'Accept': 'application/json',
@@ -27,7 +27,7 @@ const Mascotas = () => {
      }
 
      return (
-          <div className='container'>
+          <div className='container-fluid fondo'>
                <br></br>
                <div className='info-mascotas'>
                     Actualizar Información
@@ -50,9 +50,6 @@ const Mascotas = () => {
                     
                </div>
           </div>
-
-
-
      )
 }
 
