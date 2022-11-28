@@ -35,7 +35,7 @@ const theme = createTheme({
 //Pie de pagina para el copyright
 function Copyright(props) {
   return (
-    <Typography variant="body2" color="white" align="center" {...props}>
+    <Typography variant="body2" color="black" align="center" {...props}>
       {'Copyright © '}
       <Link color="inherit" href="http://localhost:3000/">
       NuevoHogar
@@ -86,8 +86,8 @@ export default function LoginPage() {
               alignItems: 'center',
             }}
           ><br></br>
-            <Typography component="h1" variant="h7">
-              Iniciar sesion
+            <Typography component="h1" variant="h3" color="black">
+              Iniciar sesión
             </Typography>
             <Box component="form" onSubmit={login} noValidate sx={{ mt: 1 }}>
               <TextField 
@@ -126,12 +126,12 @@ export default function LoginPage() {
               </Button>
               <Grid container>
                 <Grid item xs>
-                  <Link href= "./cambiarContrasena" variant="body2">
+                  <Link href= "./cambiarContrasena" variant="body5" >
                     Cambiar contraseña?
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link href="./sign-up" variant="body2">
+                  <Link href="./sign-up" variant="body5">
                     {"No tiene cuenta? Registrate"}
                   </Link>
                 </Grid>
