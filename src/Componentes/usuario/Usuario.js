@@ -38,7 +38,7 @@ const Usuario = () => {
      }
 
      return (
-          <div className='containe-fluid fondo'>
+          <div className='containe-fluid fondoP'>
                <div className='flex'>
                     <div className='menu'>
                          <ul className='nav flex-column'>
