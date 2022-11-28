@@ -63,7 +63,7 @@ const Usuario = () => {
                               </button>
                          </ul>
                     </div>
-                    <Body option={option} info={data}/>
+                    <Body className="body" option={option} info={data}/>
                </div>
           </div>
           
