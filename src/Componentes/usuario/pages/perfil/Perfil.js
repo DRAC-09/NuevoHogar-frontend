@@ -116,7 +116,7 @@ export default function Perfil(props) {
                                         fullWidth
                                         id="Nuevo Nombre"
                                         label="Nombre"
-                                        autoFocus
+                                        // autoFocus
                                    />
                               </Grid>
 
@@ -132,7 +132,7 @@ export default function Perfil(props) {
                                         fullWidth
                                         id="Identidad"
                                         label="Identidad"
-                                        autoFocus
+                                        // autoFocus
                                    />
                               </Grid>
 
@@ -146,7 +146,7 @@ export default function Perfil(props) {
                                         fullWidth
                                         id="Celular"
                                         label="Celular"
-                                        autoFocus
+                                        // autoFocus
                                    />
                               </Grid>
 
@@ -160,7 +160,7 @@ export default function Perfil(props) {
                                         fullWidth
                                         id="Telefono"
                                         label="Telefono"
-                                        autoFocus
+                                        // autoFocus
                                    />
                               </Grid>
 
@@ -174,7 +174,7 @@ export default function Perfil(props) {
                                         fullWidth
                                         id="Direccion"
                                         label="Direccion"
-                                        autoFocus
+                                        // autoFocus
                                    />
                               </Grid>
 
@@ -188,7 +188,7 @@ export default function Perfil(props) {
                                         fullWidth
                                         id="Fecha de Nacimiento"
                                         label="Fecha de Nacimiento"
-                                        autoFocus
+                                        // autoFocus
                                         min="2018-01-01"
                                         max="2018-12-31"
                                         // type="date"
@@ -206,7 +206,7 @@ export default function Perfil(props) {
                                         fullWidth
                                         id="Sexo"
                                         label="Sexo"
-                                        autoFocus
+                                        // autoFocus
                                    />
                               </Grid>
                          </Grid>
