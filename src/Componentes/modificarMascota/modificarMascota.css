@@ -35,3 +35,7 @@
     object-position: center;
     object-fit: cover;
 }
+
+.container-fluid{
+    background-color: transparent;
+}
