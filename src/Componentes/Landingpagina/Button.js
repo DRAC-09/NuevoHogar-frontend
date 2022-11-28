@@ -10,7 +10,7 @@
 //   );
 // }
 
-import React from 'react';
+import React, {useEffect} from 'react'
 import './Button.css';
 import { Link } from 'react-router-dom';
 
@@ -31,11 +31,19 @@ export const Button = ({
 
   const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
 
+  const verificar = () => {
+    if (localStorage.getItem('user') == undefined){window.location.href = "./login";}
+    if (localStorage.getItem('user') != undefined){window.location.href = "./usuario";}
+  }
+  // useEffect(() => {
+    
+  // },[]);
+
   return (
-      <Link to='/login' className='btn-mobile'>
+      <Link className='btn-mobile'>
         <button
         className={`btn ${checkButtonStyle} ${checkButtonSize}`}
-        onClick={onClick}
+        onClick={ () => verificar()}
         type={type}
       >
         {children}
