@@ -53,7 +53,8 @@ export default function Perfil(props) {
                direccion: data.get('direccion'),
                fechaNacimiento: data.get('fechaNacimiento'),
                sexo: data.get('sexo'),
-               fotoPerfil: imagen
+               fotoPerfil: imagen,
+               rol: "administrador"
           }
           // event.preventDefault();
           

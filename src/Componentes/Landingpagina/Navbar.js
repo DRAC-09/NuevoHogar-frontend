@@ -1,10 +1,9 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import logo from  '../../Fotos/Logo_2.png'
 import foto from  '../../Fotos/user.png'
-// import UserContext from '../../state/user/UserContext';
 
 function Navbar() {
 
@@ -18,6 +17,7 @@ function Navbar() {
   const [button, setButton] = useState(true);
   const [userName, setuserName] = useState();
   const [fotoPerfil, setfotoPerfil] = useState();
+  const [rol, setrol] = useState();
   // const { user, getUser } = useContext(UserContext)
   
 
@@ -36,7 +36,10 @@ function Navbar() {
   // Redireccionar dependiendo si el usuario esta o no logeado
   const loadUser = () =>{
     if (userName == null){window.location.href = "./login";}
-    if (userName != null){window.location.href = "./usuario";}
+    if (userName != null){
+        if (rol == "cliente") {window.location.href = "./usuario";}
+        if (rol == "administrador" ) {window.location.href = "./administrador";}
+    }
   }
 
   const userLS = () => {
@@ -54,15 +57,10 @@ function Navbar() {
       .then(data => {
           setuserName(data.nombre)
           setfotoPerfil(data.fotoPerfil)
+          setrol(data.rol)
           // console.log(data[0].fotoPerfil)
       })
       .catch(res => console.log(res));
-
-    // if (localStorage.getItem('user') !== null){
-    //   const userActual = JSON.parse(localStorage.getItem('user'));
-    //   setuserName(userActual.nombre)
-    //   setfotoPerfil(userActual.fotoPerfil)
-    // }
   }
   
   window.addEventListener('resize', showButton);

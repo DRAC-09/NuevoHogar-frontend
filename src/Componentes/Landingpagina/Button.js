@@ -33,7 +33,7 @@ export const Button = ({
 
   const verificar = () => {
     if (localStorage.getItem('user') == undefined){window.location.href = "./login";}
-    if (localStorage.getItem('user') != undefined){window.location.href = "./usuario";}
+    // if (localStorage.getItem('user') != undefined){window.location.href = "./usuario";}
   }
   // useEffect(() => {
     

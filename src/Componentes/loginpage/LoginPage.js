@@ -68,8 +68,10 @@ export default function LoginPage() {
     })
       .then(res => res.json())
       .then(data => {
-        localStorage.setItem('user', JSON.stringify(data));
-        window.location.href = "./usuario"; 
+        localStorage.setItem('user', JSON.stringify(data.id));
+        const rol = data.rol
+        if (rol == "cliente") {window.location.href = "./usuario";}
+        if (rol == "administrador" ) {window.location.href = "./administrador";}
       })
       .catch(res => {
         // console.log(res)
