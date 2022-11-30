@@ -64,21 +64,23 @@
 
 
 
-@media screen and (max-width: 960px) {
-     .flex {margin: 20px 2% 0 2%;}
+@media screen and (max-width: 700px) {
+     .flex {margin: 0px 2% 0 2%;}
      .menu{width: 11rem;}
      .option{font-size: 16px;}
+     .option p{
+          font-size: 15px;
+     }
 }
 
 @media screen and (max-width: 400px) {
 
      .menu{
-          width: 5rem;
-          display: flex;
-          justify-content: center;
+          width: 70px;
      }
 
-     .flex {margin: 20px 2px 0 2px;}
+     .flex {margin: 0px 2px 0 2px;}
+
 
      .fotoPerfil img{
           width: 75px;

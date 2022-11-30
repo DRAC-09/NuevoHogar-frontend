@@ -37,3 +37,13 @@ p {
      /* font-size: 18px; */
      margin-bottom: 2px;
 }
+
+@media screen and (max-width: 400px) {
+     .card-section{
+          background-image: none;
+     }
+
+     h2{
+          font-size: 15px;
+     }
+}

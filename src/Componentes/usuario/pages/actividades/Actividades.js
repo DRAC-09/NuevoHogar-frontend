@@ -26,7 +26,7 @@ const Actividades = () =>{
      },[]);
 
      return (
-          <div>
+          <div className='div-actividades'>
                <p className='titulo'>Actividades</p>
                <hr></hr><br></br>
                <div className='row'>

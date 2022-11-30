@@ -33,7 +33,7 @@
      .div-perfil{
           width: 100px;
           align-items: center;
-          margin-left: 100px !important;
+          /* margin-left: 70px !important; */
      }
 
      .textField{
@@ -55,7 +55,21 @@
           align-items: center;
           padding: 10px;
           margin: 10px;
-          width: 300px;
+          width: 200px;
+     }
+
+     .titulo{
+          /* font-size: 25px; */
+          width: 250px;
+     }
+
+     p {
+          margin: 0 !important;
+          padding: 0 !important;
+     }
+
+     .div-informacion{
+          margin-left: 70px !important;
      }
      
 }
