@@ -1,4 +1,4 @@
-import React,{ useContext }from 'react';
+import React,{ useState, useEffect }from 'react';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
@@ -12,8 +12,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import './loginpage.css';
 
-// import UserContext from '../../state/user/UserContext';
-
+import { Alert } from '@mui/material';
 
 const theme = createTheme({
   palette: {
@@ -47,7 +46,11 @@ function Copyright(props) {
 }
 
 export default function LoginPage() {
-  // const { user, setUser } = useContext(UserContext)
+  // const [value, setValue] = useState();
+
+  const handleChange = () => {
+    document.addEventListener("click",function(e){document.getElementById('alert').style.display = 'none'})
+  }
 
   const login = (e) => {
     const data = new FormData(e.currentTarget);
@@ -68,7 +71,12 @@ export default function LoginPage() {
         localStorage.setItem('user', JSON.stringify(data));
         window.location.href = "./usuario"; 
       })
-      .catch(res => console.log(res));
+      .catch(res => {
+        // console.log(res)
+        // alert("Error!, Usuario y/o Contraseñas con incorrectos");
+        // contrasenia: data.get('contrasenia'),
+        document.getElementById('alert').style.display = 'block';
+      });
     e.preventDefault();
   }
 
@@ -86,6 +94,7 @@ export default function LoginPage() {
               alignItems: 'center',
             }}
           ><br></br>
+          
             <Typography component="h1" variant="h7">
               Iniciar sesion
             </Typography>
@@ -100,6 +109,7 @@ export default function LoginPage() {
                 name="correo"
                 autoComplete="email"
                 autoFocus
+                onChange={handleChange}
               />
               <TextField
                 margin="normal"
@@ -110,7 +120,15 @@ export default function LoginPage() {
                 type="password"
                 id="password"
                 autoComplete="current-password"
+                
               />
+              <div id="alert">
+                <br></br>
+                <Alert variant="filled" severity="error">
+                  Error!, Usuario y/o Contraseñas con incorrectos
+                </Alert>
+                <br></br>  
+              </div>
               <FormControlLabel
                 control={<Checkbox value="remember" color="primary" />}
                 label="Recordarme"

@@ -9,3 +9,7 @@
     background-attachment: fixed;
     z-index: -1;
 }
+
+#alert {
+    display: none;
+}
