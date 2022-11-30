@@ -1,14 +1,15 @@
 import React from "react"
-import "./informacionPersonal.css"
+import "./donaciones.css";
 import logo from '../../Fotos/Favicon.png';
 import img from '../../Fotos/Kiara.jpg';
 import Link from '@mui/material/Link';
 
-const InformacionPersonal = () => {
+const Donaciones = () => {
     const onExit = () =>{
         localStorage.clear();
         window.location.href = "./";
     }
+
     return(
         
         <div className="containe-fluid div-inicio">
@@ -41,79 +42,74 @@ const InformacionPersonal = () => {
                 </ul>
                 </div>
                 <div className="col-6 div-center-info">
-                    <h2 className="text-center m-4 txt-white">Información Personal</h2>
+                    <h2 className="text-center m-4 txt-white">Donaciones</h2>
+                    <h6>Podra realizadar la vinculacion de las donaciones a nuestra organización</h6>
                 <form>
                         <div className="mb-4 row">
-                            <label htmlFor="nombre" className="col-sm-4 col-form-label fw-bold">Nombre Completo:
+                            <label htmlFor="descripcionDonativo" className="col-sm-4 col-form-label fw-bold">Descripcion:
                             </label>
                             <div className="col-sm-8">
-                                <input name="nombre" /* value={usuario.nombre} */ type="text" className="form-control input-infoPersonal" id="nombre" value="Jose Trinidad Reyes" ></input>
+                                <input name="descripcionDonativo" /* value={donacion.descripcionDonativo} */ type="text" className="form-control input-donativo" id="descripcionDonativo" value="A favor de compra de alimentos de los cachorros rescatados" ></input>
                             </div>
                         </div>
 
                         <div className="mb-4 row">
-                            <label htmlFor="identidad" className="col-sm-4 col-form-label fw-bold">N. Identidad <abbr title="Documento Nacional de Identificacion"> DNI </abbr>:
+                            <label htmlFor="benefactor" className="col-sm-4 col-form-label fw-bold">Benefactor:
                             </label>
                             <div className="col-sm-8">
-                                <input name="identidad" /* value={usuario.identidad} */ type="text" className="form-control input-infoPersonal" id="identidad" value="0808 1996 00004"  ></input>
+                                <input name="benefactor" /* value={donacion.benefactor} */ type="text" className="form-control input-donativo" id="benefactor" value="Mario Portillo"  ></input>
                             </div>
                         </div>
 
                         <div className="mb-4 row">
-                            <label htmlFor="direccion" className="col-sm-4 col-form-label fw-bolder">Direccion:
+                            <label htmlFor="numeroDeposito" className="col-sm-4 col-form-label fw-bolder">Numero deposito:
                                 
                             </label>
                             <div className="col-sm-8">
-                                <input name="direccion"/*  value={usuario.direccion} */ type="text" className="form-control input-infoPersonal" id="direccion" value="Col. Universidad Norte, segunda calle"  ></input>
+                                <input name="numeroDeposito"/*  value={donacion.numeroDeposito} */ type="text" className="form-control input-donativo" id="numeroDeposito" value="1236 5685 1258"  ></input>
                             </div>
                         </div>
 
                         <div className="mb-4 row">
-                            <label htmlFor="sexo" className="col-sm-4 col-form-label fw-bolder">Sexo:
+                            <label htmlFor="banco" className="col-sm-4 col-form-label fw-bolder">Entidad Bancaria:
                                 
                             </label>
                             <div className="col-sm-8">
-                                <select className="form-select input-infoPersonal" id="sexo" name="sexo" /* value={usuario.sexo}  */>
+                                <select className="form-select input-donativo" id="banco" name="banco" /* value={donacion.banco}  */>
                                     <option hidden>Selecciona una opcion</option>
-                                    <option value="1">Hombre</option>
-                                    <option value="2">Mujer</option>
-                                    <option value="3">Prefiero no decirlo</option>
+                                    <option value="1">BAC</option>
+                                    <option value="2">Occidente</option>
+                                    <option value="3">Atlantida</option>
+                                    <option value="4">Ficohsa</option>
                                 </select>
 
                             </div>
                         </div>
 
                         <div className="mb-4 row">
-                            <label htmlFor="fNacimiento" className="col-sm-4 col-form-label fw-bolder">Fecha Nacimiento:
+                            <label htmlFor="fecha" className="col-sm-4 col-form-label fw-bolder">Fecha del Donativo:
                                 
                             </label>
                             <div className="col-sm-8">
-                                <input name="fNacimiento"/*  value={usuario.fNacimiento}  */type="date" className="form-control input-infoPersonal" id="fNacimiento" ></input>
+                                <input name="fecha"/*  value={donativo.fecha}  */type="date" className="form-control input-donativo" id="fecha" ></input>
                             </div>
                         </div>
 
                         <div className="mb-4 row">
-                            <label htmlFor="celular" className="col-sm-4 col-form-label fw-bolder">Telefono Celular:
+                            <label htmlFor="observacion" className="col-sm-4 col-form-label fw-bolder">Observaciones:
                                 
                             </label>
                             <div className="col-sm-8">
-                                <input name="celular" /* value={usuario.celular} */ type="text" className="form-control input-infoPersonal" id="celular" value="9844-4518"  ></input>
+                                <input name="observacion" /* value={donacion.observacion} */ type="text" className="form-control input-donativo" id="observacion" value="Algun dato necesario"  ></input>
                             </div>
                         </div>
-
+                
                         <div className="mb-4 row">
-                            <label htmlFor="telFijo" className="col-sm-4 col-form-label fw-bolder">Telefono Fijo:</label>
-                            <div className="col-sm-8">
-                                <input name="telFijo" /* value={usuario.telFijo}  */type="text" className="form-control input-infoPersonal" id="telFijo" value="2244-6567" ></input>
-                            </div>
-                        </div>
-
-                        <div className="mb-4 row">
-                            <label htmlFor="correoElectronico" className="col-sm-4 col-form-label fw-bolder">Correo Electronico
+                            <label htmlFor="correoElectronico" className="col-sm-4 col-form-label fw-bolder">Correo Electronico:
                                 
                             </label>
                             <div className="col-sm-8">
-                                <input name="correoElectronico" /* value={usuario.correoElectronico} */ type="text" className="form-control input-infoPersonal" id="correoElectronico" value="juan@correo.com"  ></input>
+                                <input name="correoElectronico" /* value={donacion.correoElectronico} */ type="text" className="form-control input-donativo" id="correoElectronico" value="juan@correo.com"  ></input>
                             </div>
                         </div>
 
@@ -121,7 +117,7 @@ const InformacionPersonal = () => {
 
                         <div className="text-center">
                                                       
-                            <button className="btn btn-lg btn-success mt-4 col-6 button-editar" >Editar Información</button> 
+                            <button className="btn btn-lg btn-success mt-4 col-6 button-editar" >Guardar Donativo</button> 
                         </div>
 
                     </form>
@@ -161,4 +157,4 @@ const InformacionPersonal = () => {
     )
 }
 
-export default InformacionPersonal
+export default Donaciones

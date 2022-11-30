@@ -29,6 +29,8 @@ import Questions from './Componentes/pages/Questions'
 import Usuario from './Componentes/usuario/Usuario'
 import Ap from './Componentes/pages/Ap'
 import WSPGallery from './Componentes/Listadovet/WSPGallery';
+import Donaciones from "./Componentes/donaciones/Donaciones";
+import AdoptarMascota from "./Componentes/adoptarMascota/AdoptarMascota";
 
 function App() {
   return (
@@ -61,7 +63,8 @@ function App() {
             <Route path='/preguntas' element ={<Questions/>}/>
             <Route path='/usuario' element ={<Usuario/>}/>
             <Route path='/listadoveterinarios' element ={<Ap/>}/>
-
+            <Route path='/donaciones' element={<Donaciones/>}/>
+            <Route path='/adoptar' element={<AdoptarMascota/>}/>
           </Routes>
       </Router>
     </>
