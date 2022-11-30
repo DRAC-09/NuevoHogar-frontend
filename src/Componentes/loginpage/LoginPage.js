@@ -137,7 +137,6 @@ export default function LoginPage() {
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
-                // href= "./inicio"
               >
                 Iniciar sesion
               </Button>
