@@ -36,10 +36,7 @@ function Navbar() {
   // Redireccionar dependiendo si el usuario esta o no logeado
   const loadUser = () =>{
     if (userName == null){window.location.href = "./login";}
-    if (userName != null){
-        if (rol == "cliente") {window.location.href = "./usuario";}
-        if (rol == "administrador" ) {window.location.href = "./administrador";}
-    }
+    if (userName != null){window.location.href = "./usuario";}
   }
 
   const userLS = () => {
