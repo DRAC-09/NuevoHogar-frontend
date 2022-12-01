@@ -3,20 +3,20 @@
      src: url('../../../Font/FredokaOne-Regular.ttf');
 }
 
-.card{
-     align-items: center;
+/* .card{ */
+     /* align-items: center;
      cursor:pointer;
-     margin-bottom: 30px;
+     margin-bottom: 30px; */
      /* transition: background-color .3s ease-in-out; */
      /* padding-top: 15px; */
 
-     color: rgb(212, 125, 18) ;
-     background:linear-gradient(to right, rgb(212, 125, 18) 50%, rgb(255, 255, 255) 50%) no-repeat right / 200%;
+     /* color: rgb(212, 125, 18) ; */
      /* background:linear-gradient(to right, rgb(212, 125, 18) 50%, rgb(255, 255, 255) 50%) no-repeat right / 200%; */
-     transition: background-position 0.3s ease;
-}
+     /* background:linear-gradient(to right, rgb(212, 125, 18) 50%, rgb(255, 255, 255) 50%) no-repeat right / 200%; */
+     /* transition: background-position 0.3s ease; */
+/* } */
 
-.card:hover{
+/* .card:hover{
      background-position: left;
      color: white;
 }
@@ -24,7 +24,7 @@
 .card-img-top{
      height: 15em;
      object-fit: cover;
-}
+} */
 
 /* .card-body{
      margin-top: ;
@@ -38,6 +38,20 @@
      transition: background-position 0.3s ease;
      
 } */
+
+.contenedor{
+     text-align: center;
+     color: rgb(212, 125, 18);
+     margin: 10px;
+}
+
+.img-card{
+     height: 250px;
+     width: 250px;
+     border-radius: 10px;
+     /* object-position: center; */
+     object-fit: cover;
+}
 
 
 .texto{

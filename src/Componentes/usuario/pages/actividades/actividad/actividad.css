@@ -33,10 +33,10 @@ h2 {
      background-position: right 50px;
 }
 
-p {
-     /* font-size: 18px; */
-     margin-bottom: 2px;
+.text-left strong{
+     margin-right: 10px;
 }
+
 
 @media screen and (max-width: 400px) {
      .card-section{
@@ -45,5 +45,14 @@ p {
 
      h2{
           font-size: 15px;
+     }
+
+     .text-left div {
+          font-size: 13px;
+     }
+
+     .text-left strong{
+          margin-right: 5px;
+          font-weight: bold;
      }
 }

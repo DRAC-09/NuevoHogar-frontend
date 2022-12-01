@@ -43,18 +43,18 @@ const Usuario = () => {
                     <div className='menu'>
                          <ul className='nav flex-column'>
                               <button className='btn option' onClick={ () => selectOption("actividades")}>
-                                   <i className='fa-regular fa-clipboard font-icon'></i>
+                                   <i class="fa-regular fa-paste font-icon"></i>
                                    <p>Actividades</p>
-                              </button>
-
-                              <button className='btn option' onClick={ () => selectOption("perfil")}>
-                                   <i className="fa-regular fa-user font-icon"></i>
-                                   <p>Perfil</p>
                               </button>
 
                               <button className='btn option' onClick={ () => selectOption("historial")}>
                                    <i className="fa-solid fa-paw font-icon"></i>
                                    <p>Historial</p>
+                              </button>
+
+                              <button className='btn option' onClick={ () => selectOption("perfil")}>
+                                   <i className="fa-regular fa-user font-icon"></i>
+                                   <p>Perfil</p>
                               </button>
 
                               <button className='btn option' onClick={ () => cerrarSesion()}>
@@ -66,8 +66,6 @@ const Usuario = () => {
                     <Body className="body" option={option} info={data}/>
                </div>
           </div>
-          
-          
      )
 }
 

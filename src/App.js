@@ -41,7 +41,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Home/>} />
             <Route path='/mascotas' element={<Mascotas/>} />
-            <Route path='/mascotasAdmin' element={<MascotasAdmin/>} />
+            {/* <Route path='/mascotasAdmin' element={<MascotasAdmin/>} /> */}
             <Route path='/mision' element={<Misionn/>} />
             <Route path='/sign-up' element={<Registro/>}/>
             <Route path='/login' element={<LoginPage/>}/>
@@ -55,7 +55,7 @@ function App() {
             <Route path='/nuevamascota' element ={<Nuevamascota/>}/>      
             <Route path='/nuevaActividad' element ={<NuevaActividad/>}/>
             <Route path='/modificaractividad' element ={<ModificarActividad/>}/>
-            <Route path='/modificarmascota' element ={<ModificarMascota/>}/>
+            {/* <Route path='/modificarmascota' element ={<ModificarMascota/>}/> */}
             <Route path='/colaboradorLista' element ={<ColaboradorLista/>}/>
             <Route path='/colaboradorBuscar' element ={<ColaboradorBuscar/>}/>
             <Route path='/Entrenamiento' element ={<NotasList/>}/>

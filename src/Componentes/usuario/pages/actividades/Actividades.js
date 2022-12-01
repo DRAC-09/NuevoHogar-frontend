@@ -1,6 +1,6 @@
 import './actividades.css'
 import React, { useState, useEffect } from 'react'
-import Card from './mascota/actividad'
+import Card from './actividad/actividad'
 
 
 const Actividades = () =>{

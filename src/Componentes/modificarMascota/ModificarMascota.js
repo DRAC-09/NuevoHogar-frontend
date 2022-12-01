@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
@@ -44,11 +44,14 @@ function Copyright(props) {
 }
 
 
-export default function ModificarMascota() {
-  // Aqui se guardara el base64 de la imagen de la mascota
-  const pet = JSON.parse(localStorage.getItem('mascota'));
-  const [imagen, setimagen] = useState(pet.imagen);
+export default function ModificarMascota(props) {
+  const info = props.pet
+  // const pet = JSON.parse(localStorage.getItem('mascota'));
+  const [imagen, setimagen] = useState(info.imagen);
 
+  useEffect(()=>{
+    console.log("modificr}ca", info)
+  })
 
   // Capturar Imagen y convertirla a Base64
   const changeInput = (e) => {
@@ -74,7 +77,7 @@ export default function ModificarMascota() {
     // console.log(mascota)
     // event.preventDefault();
     
-    fetch(`http://localhost:7777/mascota/actualizar/${pet._id}`, {
+    fetch(`http://localhost:7777/mascota/actualizar/${info._id}`, {
       method: 'PUT',
       body: JSON.stringify(mascota),
       headers: {
@@ -92,10 +95,10 @@ export default function ModificarMascota() {
     event.preventDefault();
   };
 
-  const atras = () =>{
-    localStorage.clear();
-    window.location.href = "./mascotasAdmin";
-  }
+  // const atras = () =>{
+  //   // localStorage.clear();
+  //   // window.location.href = "./mascotasAdmin";
+  // }
 
   return (
     <div className="containe-fluid div-modificarmascota">
@@ -133,52 +136,55 @@ export default function ModificarMascota() {
                     <TextField
                       autoComplete="given-name"
                       variant="outlined"
-                      defaultValue={pet.nombre}
+                      defaultValue={info.nombre}
                       name="nombre"
                       required
                       fullWidth
                       id="Nuevo Nombre"
                       label="Nombre"
-                      autoFocus
+                      // autoFocus
                     />
                   </Grid>
 
                   <Grid item xs={12} >
                     <TextField 
+                      autoComplete="given-name"
                       variant="outlined"
-                      defaultValue={pet.edad}
+                      defaultValue={info.edad}
                       name="edad"
                       required
                       fullWidth
                       id="Nueva Edad"
                       label="Nueva Edad"
-                      autoFocus
+                      // autoFocus
                     />
                   </Grid>
 
                   <Grid item xs={12} >
                     <TextField 
+                      autoComplete="given-name"
                       variant="outlined"
-                      defaultValue={pet.raza}
+                      defaultValue={info.raza}
                       name="raza"
                       required
                       fullWidth
                       id="Nueva Raza"
                       label="Nueva Raza"
-                      autoFocus
+                      // autoFocus
                     />
                   </Grid>
 
                   <Grid item xs={12}>
                     <TextField 
+                      autoComplete="given-name"
                       variant="outlined"
-                      defaultValue={pet.sexo}
+                      defaultValue={info.sexo}
                       name="sexo"
                       required
                       fullWidth
                       id="Nuevo sexo"
                       label="Nuevo sexo"
-                      autoFocus
+                      // autoFocus
                     />
                   </Grid>
 
@@ -186,7 +192,7 @@ export default function ModificarMascota() {
                     <TextField
                       autoComplete="given-name"
                       variant="outlined"
-                      defaultValue={pet.descripcion}
+                      defaultValue={info.descripcion}
                       name="descripcion"
                       required
                       multiline
@@ -194,7 +200,7 @@ export default function ModificarMascota() {
                       fullWidth
                       id=" Nueva Descripción"
                       label="Nueva Descripción"
-                      autoFocus
+                      // autoFocus
                     />
                   </Grid>
 
@@ -206,18 +212,17 @@ export default function ModificarMascota() {
                     variant="contained"
                     // sx={{ mt: 3, mb: 2 }}
                     >Actualizar</Button>
-                  <Button
-                    onClick={ () => atras()}
+                  {/* <Button
+                    // onClick={ () => atras()}
                     fullWidth
                     variant="contained"
                     // sx={{ mt: 3, mb: 2 }}
                     >Atras
-                  </Button>
+                  </Button> */}
                 </div>
             </Box>
           </Box>
         </Container>
-        <Copyright sx={{ mt: 5 } } />
       </ThemeProvider>
     </div>
   );  

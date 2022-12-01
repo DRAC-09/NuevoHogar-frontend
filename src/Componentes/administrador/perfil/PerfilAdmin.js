@@ -5,14 +5,12 @@ import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import './perfil.css';
-import foto from '../../../../Fotos/account.png'
+import './perfiladmin.css';
+import foto from '../../../Fotos/account.png'
 
-
-export default function Perfil(props) {
+export default function PerfilAdmin(props) {
      const user = props.user
      const [imagen, setimagen] = useState(user.fotoPerfil);
-     const [userForm, setuserForm] = useState();
      const id = JSON.parse(localStorage.getItem('user'));
 
   // Capturar Imagen y convertirla a Base64
@@ -26,21 +24,6 @@ export default function Perfil(props) {
           } 
      };
 
-     useEffect(() => {
-          fetch(`https://nuevo-hogar-backend.vercel.app/cliente/${id}`, {
-               method: 'GET',
-               headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-               }
-          })
-          .then(res => res.json())
-          .then(data => {
-               setuserForm(data)
-               // setimagen(data.imagen)
-          })
-          .catch(res => console.log(res));
-     },);
 
   // Actualizacion de la informacion de la mascota y Conexion a la base de datos
      const actualizarInformacion = (event) => {
@@ -54,7 +37,7 @@ export default function Perfil(props) {
                fechaNacimiento: data.get('fechaNacimiento'),
                sexo: data.get('sexo'),
                fotoPerfil: imagen,
-               rol: "cliente"
+               rol: "administrador"
           }
           // event.preventDefault();
           
@@ -221,15 +204,6 @@ export default function Perfil(props) {
                                    // sx={{ mt: 3, mb: 2 }}
                                    >Actualizar
                               </Button>
-
-                              {/* <Button
-                                   className='btn-color'
-                                   onClick={ () => atras()}
-                                   fullWidth
-                                   variant="contained"
-                                   // sx={{ mt: 3, mb: 2 }}
-                                   >Atras
-                              </Button> */}
                          </div>
                </Box>
           </Box>
