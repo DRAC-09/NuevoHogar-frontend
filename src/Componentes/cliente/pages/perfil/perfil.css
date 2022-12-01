@@ -27,6 +27,11 @@
      object-fit: cover;
 }
 
+.div-perfilUser{
+     margin: 0 !important;
+     padding: 0 !important;
+}
+
 
 
 @media screen and (max-width: 400px) {

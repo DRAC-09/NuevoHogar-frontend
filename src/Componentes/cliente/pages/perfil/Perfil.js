@@ -81,7 +81,7 @@ export default function Perfil(props) {
           <div className="containe-fluid div-perfil">
           <p className='titulo'>Informacion de Perfil</p>
           <hr></hr>
-          <Container className='div-informacion' component="main" maxWidth="xs">
+          <Container className='div-perfilUser' component="main" maxWidth="xs">
                <CssBaseline/>
                <Box
                     sx={{

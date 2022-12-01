@@ -31,9 +31,8 @@ const Actividades = () =>{
                <hr></hr><br></br>
                <div className='row'>
                          {actividades.map(actividad =>{
-                              return <div>
+                              return <div key={actividad._id}>
                                         <Card 
-                                        key=           {actividad._id}
                                         titulo=        {actividad.titulo} 
                                         beneficio=     {actividad.beneficio} 
                                         resumen=       {actividad.resumen} 

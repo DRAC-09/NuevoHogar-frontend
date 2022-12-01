@@ -32,6 +32,7 @@ import Ap from './Componentes/pages/Ap'
 import WSPGallery from './Componentes/Listadovet/WSPGallery';
 import Donaciones from "./Componentes/donaciones/Donaciones";
 import AdoptarMascota from "./Componentes/adoptarMascota/AdoptarMascota";
+import Cliente from './Componentes/cliente/Cliente'
 
 function App() {
   return (
@@ -50,8 +51,8 @@ function App() {
             <Route path='/historial' element={<Historial/>}/>
             <Route path='/cambiarContrasena' element={<CambiarContrasena/>}/>
             <Route path='/inicio' element={<Inicio/>}/>
-            <Route path='/informacionPersonal' element ={<InformacionPersonal/>}/>
-            <Route path='/editarInfoPersonal' element ={<EditarInfoPersonal/>}/>
+            {/* <Route path='/informacionPersonal' element ={<InformacionPersonal/>}/> */}
+            {/* <Route path='/editarInfoPersonal' element ={<EditarInfoPersonal/>}/> */}
             <Route path='/nuevamascota' element ={<Nuevamascota/>}/>      
             <Route path='/nuevaActividad' element ={<NuevaActividad/>}/>
             <Route path='/modificaractividad' element ={<ModificarActividad/>}/>
@@ -63,10 +64,11 @@ function App() {
             <Route path='/desaparecidos' element ={<Desaparecidoss/>}/>
             <Route path='/preguntas' element ={<Questions/>}/>
             <Route path='/usuario' element ={<Usuario/>}/>
-            <Route path='/administrador' element ={<Administrador/>}/>
+            {/* <Route path='/administrador' element ={<Administrador/>}/> */}
             <Route path='/listadoveterinarios' element ={<Ap/>}/>
             <Route path='/donaciones' element={<Donaciones/>}/>
             <Route path='/adoptar' element={<AdoptarMascota/>}/>
+            {/* <Route path='/cliente' element={<Cliente/>}/> */}
           </Routes>
       </Router>
     </>

@@ -27,6 +27,11 @@
      object-fit: cover;
 }
 
+.div-perfilAdmin{
+     margin: 0 !important;
+     padding: 0 !important;
+}
+
 
 
 @media screen and (max-width: 400px) {
@@ -68,7 +73,7 @@
           padding: 0 !important;
      }
 
-     .div-informacion{
+     .div-perfilAdmin{
           margin-left: 70px !important;
      }
      
