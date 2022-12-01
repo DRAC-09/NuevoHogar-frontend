@@ -4,7 +4,7 @@ import ModificarMascota from '../modificarMascota/ModificarMascota'
 import './mascotas.css'
 import { Grid, Box } from '@mui/material'
 
-const Mascotas = () => {
+const Mascotas = ({handleEvent}) => {
      // const mascotas = props.mascotas
      const [mascotas, setMascotas] = useState([]);
      const [mascota, setMascota] = useState(' ');
@@ -28,10 +28,13 @@ const Mascotas = () => {
      },[]);
 
      const pet = (mascotaDetalles) => {
-          setMascota(mascotaDetalles)
-          // localStorage.setItem('mascota', JSON.stringify(mascotaDetalles));
-          document.getElementById('modificar-mascota').style.display = 'block'
-          document.getElementById('mascotas').style.display = 'none'
+          // setMascota(mascotaDetalles)
+          handleEvent(false)
+          localStorage.setItem('mascota', JSON.stringify(mascotaDetalles));
+          // event.handleEvent(true)
+          // document.getElementById('modificar-mascota').style.display = 'block'
+          // document.getElementById('mascotas').style.display = 'none'
+
           
           // console.log(mascota)
      }
@@ -43,18 +46,13 @@ const Mascotas = () => {
 
      return (
           <div className='fondo'>
-               <div className='info-mascotas'>
-                    Mascotas
-                    <hr></hr>
-               </div><br></br>
                <div id='mascotas'>
                     <Grid container>
                          {mascotas.map(mascota =>{
-                              return <Grid onClick={ () => pet(mascota)}>
+                              // return <Grid onClick={e => handleEvent(false)}>
+                              return <Grid key={mascota._id} onClick={ (e) => pet(mascota,e)}>
                                         <Mascota
                                         item xs={12} sm={6} md={4}
-                                        
-                                        key=           {mascota._id}
                                         imagen=        {mascota.imagen} 
                                         nombre=        {mascota.nombre}
                                         edad=          {mascota.edad}
@@ -66,10 +64,10 @@ const Mascotas = () => {
                          })}
                     </Grid>
                </div>
-               <div id='modificar-mascota'>
+               {/* <div id='modificar-mascota'>
                     <ModificarMascota onClick={ () => atras()} pet={mascota}/>
                     <button className='btn-atras' onClick={ () => atras()} >ATRAS</button>
-               </div>
+               </div> */}
           </div>
      )
 }

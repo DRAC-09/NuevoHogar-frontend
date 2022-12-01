@@ -2,7 +2,8 @@ import React from 'react'
 import './bodyadmin.css'
 
 // Componentes
-import MascotasAdmin from '../../mascotas/Mascotas'
+// import MascotasAdmin from '../../mascotas/Mascotas'
+import MascotasAdmin from '../mascotasAdmin/MascotasAdmin'
 import Perfil from '../perfil/PerfilAdmin'
 
 const BodyAdmin = (props) => {

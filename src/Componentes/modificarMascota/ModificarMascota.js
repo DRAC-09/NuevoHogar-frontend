@@ -44,13 +44,12 @@ function Copyright(props) {
 }
 
 
-export default function ModificarMascota(props) {
-  const info = props.pet
-  // const pet = JSON.parse(localStorage.getItem('mascota'));
-  const [imagen, setimagen] = useState(info.imagen);
+export default function ModificarMascota({handleEvent}) {
+  const pet = JSON.parse(localStorage.getItem('mascota'));
+  const [imagen, setimagen] = useState(pet.imagen);
 
   useEffect(()=>{
-    console.log("modificr}ca", info)
+    // console.log("modificr}ca", pet)
   })
 
   // Capturar Imagen y convertirla a Base64
@@ -77,7 +76,7 @@ export default function ModificarMascota(props) {
     // console.log(mascota)
     // event.preventDefault();
     
-    fetch(`http://localhost:7777/mascota/actualizar/${info._id}`, {
+    fetch(`https://nuevo-hogar-backend.vercel.app/mascota/actualizar/${pet._id}`, {
       method: 'PUT',
       body: JSON.stringify(mascota),
       headers: {
@@ -87,9 +86,9 @@ export default function ModificarMascota(props) {
       })
     .then(res => res.json())
     .then(data => {
-      console.log(data)
+      // console.log(data)
       alert(data.mensaje)
-      window.location.href = "./mascotasAdmin"; 
+      handleEvent(true) 
     })
     .catch(res => console.log(res));
     event.preventDefault();
@@ -101,9 +100,9 @@ export default function ModificarMascota(props) {
   // }
 
   return (
-    <div className="containe-fluid div-modificarmascota">
+    <div className="div-modificarmascota">
       <ThemeProvider theme={theme}>
-        <Container component="main" maxWidth="xs">
+        <Container className="contenedor-modificarmascota"  component="main" maxWidth="xs">
           <CssBaseline/>
           <Box
             sx={{
@@ -119,7 +118,6 @@ export default function ModificarMascota(props) {
                   {/* IMAGEN */}
                   <Grid  item xs={12} >
                     <div className="container-fluid">
-                    <br></br>
                       {/* VIEW IMAGES */}
                       <div className='fotoPerfil' >
                           <img className="fotoPerfil" src={imagen}></img><br></br>
@@ -136,7 +134,7 @@ export default function ModificarMascota(props) {
                     <TextField
                       autoComplete="given-name"
                       variant="outlined"
-                      defaultValue={info.nombre}
+                      defaultValue={pet.nombre}
                       name="nombre"
                       required
                       fullWidth
@@ -150,7 +148,7 @@ export default function ModificarMascota(props) {
                     <TextField 
                       autoComplete="given-name"
                       variant="outlined"
-                      defaultValue={info.edad}
+                      defaultValue={pet.edad}
                       name="edad"
                       required
                       fullWidth
@@ -164,7 +162,7 @@ export default function ModificarMascota(props) {
                     <TextField 
                       autoComplete="given-name"
                       variant="outlined"
-                      defaultValue={info.raza}
+                      defaultValue={pet.raza}
                       name="raza"
                       required
                       fullWidth
@@ -178,7 +176,7 @@ export default function ModificarMascota(props) {
                     <TextField 
                       autoComplete="given-name"
                       variant="outlined"
-                      defaultValue={info.sexo}
+                      defaultValue={pet.sexo}
                       name="sexo"
                       required
                       fullWidth
@@ -192,7 +190,7 @@ export default function ModificarMascota(props) {
                     <TextField
                       autoComplete="given-name"
                       variant="outlined"
-                      defaultValue={info.descripcion}
+                      defaultValue={pet.descripcion}
                       name="descripcion"
                       required
                       multiline
@@ -212,13 +210,13 @@ export default function ModificarMascota(props) {
                     variant="contained"
                     // sx={{ mt: 3, mb: 2 }}
                     >Actualizar</Button>
-                  {/* <Button
-                    // onClick={ () => atras()}
+                  <Button
+                    onClick={e => handleEvent(true)}
                     fullWidth
                     variant="contained"
                     // sx={{ mt: 3, mb: 2 }}
                     >Atras
-                  </Button> */}
+                  </Button>
                 </div>
             </Box>
           </Box>
