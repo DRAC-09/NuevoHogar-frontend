@@ -51,12 +51,12 @@ function App() {
             <Route path='/historial' element={<Historial/>}/>
             <Route path='/cambiarContrasena' element={<CambiarContrasena/>}/>
             <Route path='/inicio' element={<Inicio/>}/>
-            {/* <Route path='/informacionPersonal' element ={<InformacionPersonal/>}/> */}
-            {/* <Route path='/editarInfoPersonal' element ={<EditarInfoPersonal/>}/> */}
+            <Route path='/informacionPersonal' element ={<InformacionPersonal/>}/>
+            <Route path='/editarInfoPersonal' element ={<EditarInfoPersonal/>}/>
             <Route path='/nuevamascota' element ={<Nuevamascota/>}/>      
             <Route path='/nuevaActividad' element ={<NuevaActividad/>}/>
             <Route path='/modificaractividad' element ={<ModificarActividad/>}/>
-            {/* <Route path='/modificarmascota' element ={<ModificarMascota/>}/> */}
+            <Route path='/modificarmascota' element ={<ModificarMascota/>}/>
             <Route path='/colaboradorLista' element ={<ColaboradorLista/>}/>
             <Route path='/colaboradorBuscar' element ={<ColaboradorBuscar/>}/>
             <Route path='/Entrenamiento' element ={<NotasList/>}/>
