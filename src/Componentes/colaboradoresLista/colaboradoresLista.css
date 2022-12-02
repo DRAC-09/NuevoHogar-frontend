@@ -1,0 +1,43 @@
+.mod-text{
+     text-transform: capitalize;
+     text-align: center;
+}
+
+.btn-agregar{
+     font-size: 20px;
+     border: 1px solid #CED4DA;
+     border-radius: 5px;
+}
+
+.btn-agregar i{
+     margin-right: 10px;
+}
+
+.card-header{
+     color: white;
+}
+
+.footer{
+     margin-top: 5px;
+     font-size: 15px;
+     color:white
+}
+
+.table tr td{
+     color: white !important;
+     text-align: left !important;
+}
+
+.col-info{
+     width: 50px !important;
+}
+
+.dialog-colaborador{
+     width: 400px;
+}
+
+@media screen and (max-width: 1280px) {
+     .modal-colaborador{
+          margin-left: 50px !important;
+     }
+}
