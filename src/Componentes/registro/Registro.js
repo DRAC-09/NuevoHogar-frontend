@@ -41,7 +41,7 @@ const Registro = () => {
           correo: data.get('correo'),
           contrasenia: data.get('contrasenia')
         }
-        // console.log(mascota)
+        // console.log(usuario)
         
         fetch("https://nuevo-hogar-backend.vercel.app/cliente/register", {
           method: 'POST',
@@ -107,9 +107,9 @@ const Registro = () => {
                             <div className="col-sm-8">
                                 <select className="form-select input-registro" id="sexo" name="sexo" value={usuario.sexo}  onChange={(event) => handleChange(event) }>
                                     <option hidden>Selecciona una opcion</option>
-                                    <option value="1">Hombre</option>
-                                    <option value="2">Mujer</option>
-                                    <option value="3">Prefiero no decirlo</option>
+                                    <option value="Hombre">Hombre</option>
+                                    <option value="Mujer">Mujer</option>
+                                    <option value="Prefiero no decirlo">Prefiero no decirlo</option>
                                 </select>
 
                             </div>
