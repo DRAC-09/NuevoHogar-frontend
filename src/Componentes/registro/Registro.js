@@ -55,7 +55,7 @@ const Registro = () => {
         .then(data => {
           console.log(data)
           alert(data.mensaje)
-          window.location.href = "./sign-up"; 
+          window.location.href = "./login"; 
         })
         .catch(res => console.log(res));
         event.preventDefault();
