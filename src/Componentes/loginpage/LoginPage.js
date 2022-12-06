@@ -144,11 +144,11 @@ export default function LoginPage() {
                 Iniciar sesion
               </Button>
               <Grid container>
-                <Grid item xs>
+                { /*<Grid item xs>
                   <Link href= "./cambiarContrasena" variant="body5" >
                     Cambiar contraseña?
                   </Link>
-                </Grid>
+                </Grid> */}
                 <Grid item>
                   <Link href="./sign-up" variant="body5">
                     {"No tiene cuenta? Registrate"}
