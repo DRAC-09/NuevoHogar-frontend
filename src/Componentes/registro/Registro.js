@@ -30,9 +30,10 @@ const Registro = () => {
 
     const handleSubmit = (event) => {
         const data = new FormData(event.currentTarget);
-        const mascota = {
+        const usuario = {
           nombre: data.get('nombre'),
           identidad: data.get('identidad'),
+          direccion: data.get('direccion'),
           sexo: data.get('sexo'),
           fechaNacimiento: data.get('fechaNacimiento'),
           celular: data.get('celular'),
@@ -44,7 +45,7 @@ const Registro = () => {
         
         fetch("https://nuevo-hogar-backend.vercel.app/cliente/register", {
           method: 'POST',
-          body: JSON.stringify(mascota),
+          body: JSON.stringify(usuario),
           headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
@@ -115,11 +116,11 @@ const Registro = () => {
                         </div>
 
                         <div className="mb-4 row">
-                            <label htmlFor="fNacimiento" className="col-sm-4 col-form-label fw-bolder">Fecha Nacimiento:
+                            <label htmlFor="fechaNacimiento" className="col-sm-4 col-form-label fw-bolder">Fecha Nacimiento:
                                 <abbr title="Campo obligatorio" className="abbr-obligatoria"> *</abbr>
                             </label>
                             <div className="col-sm-8">
-                                <input name="fNacimiento" value={usuario.fechaNacimiento} type="date" className="form-control input-registro" id="fNacimiento"  onChange={ handleChange }></input>
+                                <input name="fechaNacimiento" value={usuario.fechaNacimiento} type="date" className="form-control input-registro" id="fechaNacimiento"  onChange={ handleChange }></input>
                             </div>
                         </div>
 
@@ -133,27 +134,27 @@ const Registro = () => {
                         </div>
 
                         <div className="mb-4 row">
-                            <label htmlFor="telFijo" className="col-sm-4 col-form-label fw-bolder">Telefono Fijo:</label>
+                            <label htmlFor="telefono" className="col-sm-4 col-form-label fw-bolder">Telefono Fijo:</label>
                             <div className="col-sm-8">
-                                <input name="telFijo" value={usuario.telefono} type="text" className="form-control input-registro" id="telFijo" placeholder="2244-6567"  onChange={ handleChange }></input>
+                                <input name="telefono" value={usuario.telefono} type="text" className="form-control input-registro" id="telefono" placeholder="2244-6567"  onChange={ handleChange }></input>
                             </div>
                         </div>
 
                         <div className="mb-4 row">
-                            <label htmlFor="correoElectronico" className="col-sm-4 col-form-label fw-bolder">Correo Electronico
+                            <label htmlFor="correo" className="col-sm-4 col-form-label fw-bolder">Correo Electronico
                                 <abbr title="Campo obligatorio" className="abbr-obligatoria"> *</abbr>
                             </label>
                             <div className="col-sm-8">
-                                <input name="correoElectronico" value={usuario.correo} type="text" className="form-control input-registro" id="correoElectronico" placeholder="juan@correo.com"  onChange={ handleChange }></input>
+                                <input name="correo" value={usuario.correo} type="text" className="form-control input-registro" id="correo" placeholder="juan@correo.com"  onChange={ handleChange }></input>
                             </div>
                         </div>
 
                         <div className="mb-3 row">
-                            <label htmlFor="password" className="col-sm-4 col-form-label fw-bolder">Password
+                            <label htmlFor="contrasenia" className="col-sm-4 col-form-label fw-bolder">Password
                                 <abbr title="Campo obligatorio" className="abbr-obligatoria"> *</abbr>
                             </label>
                             <div className="col-sm-8">
-                                <input name="password" value={usuario.contrasenia} type="password" className="form-control input-registro" id="password" placeholder="Alf4bet0-" onChange={ handleChange }></input>
+                                <input name="contrasenia" value={usuario.contrasenia} type="password" className="form-control input-registro" id="contrasenia" placeholder="Alf4bet0-" onChange={ handleChange }></input>
                             </div>
                         </div>
 
