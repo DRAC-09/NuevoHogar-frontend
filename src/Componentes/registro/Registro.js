@@ -72,13 +72,13 @@ const Registro = () => {
                     <h6 className="text-center mb-5">¿Ya tienes una cuenta con nosotros? 
                     {/* <p className="text-danger" onClick={() => historial.push("/login")}>INICIAR SESIÓN</p> */}
                     </h6>
-                    <form>
+                    <form onSubmit={(event) => handleSubmit(event)}>
                         <div className="mb-4 row">
                             <label htmlFor="nombre" className="col-sm-4 col-form-label fw-bold">Nombre Completo:
                                 <abbr title="Campo obligatorio" className="abbr-obligatoria"> * </abbr>
                             </label>
                             <div className="col-sm-8">
-                                <input name="nombre" value={usuario.nombre} type="text" className="form-control input-registro" id="nombre" placeholder="Jose Trinidad Reyes"  onChange={ handleChange }></input>
+                                <input name="nombre" value={usuario.nombre} type="text" className="form-control input-registro" id="nombre" placeholder="Jose Trinidad Reyes"  onChange={(event) => handleChange(event) }></input>
                             </div>
                         </div>
 
@@ -87,7 +87,7 @@ const Registro = () => {
                                 <abbr title="Campo obligatorio" className="abbr-obligatoria"> * </abbr>
                             </label>
                             <div className="col-sm-8">
-                                <input name="identidad" value={usuario.identidad} type="text" className="form-control input-registro" id="identidad" placeholder="0808 1996 00004"  onChange={ handleChange }></input>
+                                <input name="identidad" value={usuario.identidad} type="text" className="form-control input-registro" id="identidad" placeholder="0808 1996 00004" onChange={(event) => handleChange(event) }></input>
                             </div>
                         </div>
 
@@ -96,7 +96,7 @@ const Registro = () => {
                                 <abbr title="Campo obligatorio" className="abbr-obligatoria"> *</abbr>
                             </label>
                             <div className="col-sm-8">
-                                <input name="direccion" value={usuario.direccion} type="text" className="form-control input-registro" id="direccion" placeholder="Col. Universidad Norte, segunda calle"  onChange={ handleChange }></input>
+                                <input name="direccion" value={usuario.direccion} type="text" className="form-control input-registro" id="direccion" placeholder="Col. Universidad Norte, segunda calle"  onChange={(event) => handleChange(event) }></input>
                             </div>
                         </div>
 
@@ -105,7 +105,7 @@ const Registro = () => {
                                 <abbr title="Campo obligatorio" className="abbr-obligatoria"> *</abbr>
                             </label>
                             <div className="col-sm-8">
-                                <select className="form-select input-registro" id="sexo" name="sexo" value={usuario.sexo}  onChange={ handleChange }>
+                                <select className="form-select input-registro" id="sexo" name="sexo" value={usuario.sexo}  onChange={(event) => handleChange(event) }>
                                     <option hidden>Selecciona una opcion</option>
                                     <option value="1">Hombre</option>
                                     <option value="2">Mujer</option>
@@ -120,7 +120,7 @@ const Registro = () => {
                                 <abbr title="Campo obligatorio" className="abbr-obligatoria"> *</abbr>
                             </label>
                             <div className="col-sm-8">
-                                <input name="fechaNacimiento" value={usuario.fechaNacimiento} type="date" className="form-control input-registro" id="fechaNacimiento"  onChange={ handleChange }></input>
+                                <input name="fechaNacimiento" value={usuario.fechaNacimiento} type="date" className="form-control input-registro" id="fechaNacimiento"  onChange={(event) => handleChange(event) }></input>
                             </div>
                         </div>
 
@@ -129,14 +129,14 @@ const Registro = () => {
                                 <abbr title="Campo obligatorio" className="abbr-obligatoria"> *</abbr>
                             </label>
                             <div className="col-sm-8">
-                                <input name="celular" value={usuario.celular} type="text" className="form-control input-registro" id="celular" placeholder="9844-4518"  onChange={ handleChange }></input>
+                                <input name="celular" value={usuario.celular} type="text" className="form-control input-registro" id="celular" placeholder="9844-4518"  onChange={(event) => handleChange(event) }></input>
                             </div>
                         </div>
 
                         <div className="mb-4 row">
                             <label htmlFor="telefono" className="col-sm-4 col-form-label fw-bolder">Telefono Fijo:</label>
                             <div className="col-sm-8">
-                                <input name="telefono" value={usuario.telefono} type="text" className="form-control input-registro" id="telefono" placeholder="2244-6567"  onChange={ handleChange }></input>
+                                <input name="telefono" value={usuario.telefono} type="text" className="form-control input-registro" id="telefono" placeholder="2244-6567" onChange={(event) => handleChange(event) }></input>
                             </div>
                         </div>
 
@@ -145,7 +145,7 @@ const Registro = () => {
                                 <abbr title="Campo obligatorio" className="abbr-obligatoria"> *</abbr>
                             </label>
                             <div className="col-sm-8">
-                                <input name="correo" value={usuario.correo} type="text" className="form-control input-registro" id="correo" placeholder="juan@correo.com"  onChange={ handleChange }></input>
+                                <input name="correo" value={usuario.correo} type="text" className="form-control input-registro" id="correo" placeholder="juan@correo.com"  onChange={(event) => handleChange(event) }></input>
                             </div>
                         </div>
 
@@ -154,7 +154,7 @@ const Registro = () => {
                                 <abbr title="Campo obligatorio" className="abbr-obligatoria"> *</abbr>
                             </label>
                             <div className="col-sm-8">
-                                <input name="contrasenia" value={usuario.contrasenia} type="password" className="form-control input-registro" id="contrasenia" placeholder="Alf4bet0-" onChange={ handleChange }></input>
+                                <input name="contrasenia" value={usuario.contrasenia} type="password" className="form-control input-registro" id="contrasenia" placeholder="Alf4bet0-" onChange={(event) => handleChange(event) }></input>
                             </div>
                         </div>
 
@@ -163,7 +163,7 @@ const Registro = () => {
                             <a href="home"> CONDICIONES GENERALES DE USO</a> y la <a href="home">POLÍTICA DE PRIVACIDAD</a></div>
                             {/* <button className="btn btn-lg btn-success mt-4 col-6 button-registro" onClick={registro}>Regístrate</button> */}
                             
-                            <button className="btn btn-lg btn-success mt-4 col-6 button-registro" onSubmit={handleSubmit}>Regístrate</button> 
+                            <button className="btn btn-lg btn-success mt-4 col-6 button-registro" type="submit">Regístrate</button> 
                         </div>
 
                     </form>
