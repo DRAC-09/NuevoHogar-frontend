@@ -94,11 +94,11 @@ export default function Nuevamascota() {
   };
 
   return (
-    <div className="containe-fluid div-crearmascota">
+    <div className="div-crearmascota">
       <p className='titulo'>Agregar Mascota</p>
       <hr></hr>
       <ThemeProvider theme={theme}>
-        <Container component="main" maxWidth="xs">
+        <Container component="main" maxWidth="xs" className='div-perfilUser'>
           <CssBaseline />
           <Box
             sx={{
