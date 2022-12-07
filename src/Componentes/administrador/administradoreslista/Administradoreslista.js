@@ -33,7 +33,7 @@ const Administradoreslista = () => {
 
      return (
           <div className="containe">
-               <p className='titulo'>Clientes</p>
+               <p className='titulo'>Administradores</p>
                <hr></hr>
                <div className=" ">
                     {/* <button className="btn btn-agregar"><i className="fa-solid fa-user-plus"></i>Agregar</button> */}

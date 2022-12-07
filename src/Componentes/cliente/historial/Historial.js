@@ -7,6 +7,7 @@ import { Grid } from '@mui/material'
 
 const Historial = () =>{
      const [mascotas, setMascotas] = useState([]);
+     const [mensaje, setMensaje] = useState(false);
 
      useEffect(() => {
           obtenermascotas();
@@ -23,8 +24,8 @@ const Historial = () =>{
           })
           .then(res => res.json())
           .then(data => {
-               // console.log(data.historial)
-               setMascotas(data.historial)
+               if (data.historial !== undefined) {setMascotas(data.historial)}
+               if (data.historial === undefined) {setMensaje(true)}
           })
           .catch(res => console.log(res));
      }
@@ -32,25 +33,36 @@ const Historial = () =>{
      return (
           <div>
                <div className='mascotas-infocliente'>
-                    Mascotas
+                    Historial
                     <hr></hr>
                </div><br></br>
                <div className='flex-mascotasCliente'>
-                    {mascotas.map(mascota =>{
-                         return <Grid key={mascota._id}>
-                                   <div className='contenedor-mascotacliente'>
-                                        <img src={mascota.imagen} className='imagen'></img>
-                                        <h5 className="texto">{mascota.nombre}</h5>
-                                        <div className="info">
-                                             <h5><strong>Edad:</strong> {mascota.edad}</h5>
-                                             <h5><strong>Raza:</strong> {mascota.raza}</h5>
-                                             <h5><strong>Sexo:</strong> {mascota.sexo}</h5>
-                                        </div>
-                                        <br></br>
+               {(() => {
+                    console.log(mascotas)
+                    if (mensaje === true){
+                         return (
+                              <div>
+                                   No hay Registros
+                              </div>
+                         )
+                    }
+
+               })()}
+               {mascotas.map(mascota =>{
+                    return <Grid key={mascota._id}>
+                              <div className='contenedor-mascotacliente'>
+                                   <img src={mascota.imagen} className='imagen'></img>
+                                   <h5 className="texto">{mascota.nombre}</h5>
+                                   <div className="info">
+                                        <h5><strong>Edad:</strong> {mascota.edad}</h5>
+                                        <h5><strong>Raza:</strong> {mascota.raza}</h5>
+                                        <h5><strong>Sexo:</strong> {mascota.sexo}</h5>
                                    </div>
-                                   <br></br><br></br>
-                              </Grid>
-                    })}
+                                   <br></br>
+                              </div>
+                              <br></br><br></br>
+                         </Grid>
+               })}
                </div>
           </div>
      )
