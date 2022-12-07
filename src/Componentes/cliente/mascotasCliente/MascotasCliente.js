@@ -106,7 +106,6 @@ const MascotasClientes = () => {
                                         <h5 className="texto">{mascota.nombre}</h5>
                                         <div className="info">
                                              <h5><strong>Edad:</strong> {mascota.edad}</h5>
-                                             <h5><strong>Edad:</strong> {mascota.edad}</h5>
                                              <h5><strong>Raza:</strong> {mascota.raza}</h5>
                                              <h5><strong>Sexo:</strong> {mascota.sexo}</h5>
                                              <h5><strong>Descripción:</strong> {mascota.descripcion}</h5>
