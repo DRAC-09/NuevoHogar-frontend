@@ -4,6 +4,7 @@ import './bodyadmin.css'
 // Componentes
 import ClientesLista from '../clienteslista/Clienteslista'
 import Colaboradores from '../../colaboradoresLista/ColaboradoresLista'
+import Administradoreslista from '../administradoreslista/Administradoreslista'
 import Nuevamascota from '../nuevaMascota/Nuevamascota'
 import MascotasAdmin from '../mascotasAdmin/MascotasAdmin'
 import Perfil from '../perfil/PerfilAdmin'
@@ -26,7 +27,7 @@ const BodyAdmin = (props) => {
                               return <Colaboradores/>
                          case 'administradores':
                               return <div>
-                                        administradores
+                                        <Administradoreslista/>
                                    </div>
                          case 'agregarMascota':
                               return <Nuevamascota/>
