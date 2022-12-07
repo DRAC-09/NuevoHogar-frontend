@@ -2,9 +2,10 @@ import React from 'react'
 import './body.css'
 
 // Componentes
-import Actividades from '../pages/actividades/Actividades'
-import Perfil from '../pages/perfil/Perfil'
-import Historial from '../pages/historial/Historial'
+import Actividades from '../actividades/Actividades'
+import Mascotascliente from '../mascotasCliente/MascotasCliente'
+import Historial from '../historial/Historial'
+import Perfil from '../perfil/Perfil'
 
 
 const Body = (props) => {
@@ -14,10 +15,12 @@ const Body = (props) => {
                     switch (props.option) {
                          case 'actividades':
                               return <Actividades/>
-                         case 'perfil':
-                              return <Perfil user={props.info}/>
+                         case 'mascotas':
+                              return <Mascotascliente/>
                          case 'historial':
                               return <Historial/>
+                         case 'perfil':
+                              return <Perfil user={props.info}/>
                          default:
                               return <Actividades/>
                     }

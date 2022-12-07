@@ -6,13 +6,13 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import './perfil.css';
-import foto from '../../../../Fotos/account.png'
+import foto from '../../../Fotos/account.png'
 
 
 export default function Perfil(props) {
      const user = props.user
      const [imagen, setimagen] = useState(user.fotoPerfil);
-     const [userForm, setuserForm] = useState();
+     // const [userForm, setuserForm] = useState();
      const id = JSON.parse(localStorage.getItem('user'));
 
   // Capturar Imagen y convertirla a Base64
@@ -36,7 +36,7 @@ export default function Perfil(props) {
           })
           .then(res => res.json())
           .then(data => {
-               setuserForm(data)
+               // setuserForm(data)
                // setimagen(data.imagen)
           })
           .catch(res => console.log(res));

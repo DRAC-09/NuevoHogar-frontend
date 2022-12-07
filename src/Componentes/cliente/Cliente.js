@@ -47,8 +47,13 @@ const Cliente = () => {
                                    <p>Actividades</p>
                               </button>
 
-                              <button className='btn option' onClick={ () => selectOption("historial")}>
+                              <button className='btn option' onClick={ () => selectOption("mascotas")}>
                                    <i className="fa-solid fa-paw font-icon"></i>
+                                   <p>Mascotas</p>
+                              </button>
+
+                              <button className='btn option' onClick={ () => selectOption("historial")}>
+                                   <i className="fa-regular fa-folder font-icon"></i>
                                    <p>Historial</p>
                               </button>
 
