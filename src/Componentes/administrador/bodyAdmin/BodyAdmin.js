@@ -2,6 +2,7 @@ import React from 'react'
 import './bodyadmin.css'
 
 // Componentes
+import ClientesLista from '../clienteslista/Clienteslista'
 import Colaboradores from '../../colaboradoresLista/ColaboradoresLista'
 import Nuevamascota from '../nuevaMascota/Nuevamascota'
 import MascotasAdmin from '../mascotasAdmin/MascotasAdmin'
@@ -19,7 +20,7 @@ const BodyAdmin = (props) => {
                                    </div>
                          case 'clientes':
                               return <div>
-                                        clientes
+                                        <ClientesLista/>
                                    </div>
                          case 'colaboradores':
                               return <Colaboradores/>

@@ -1,0 +1,18 @@
+.flex-titulo-cliente{
+     display: flex;
+     /* flex-direction: column; */
+}
+
+.col-info img {
+     height: 100px;
+     width: 100px;
+     border-radius: 200px;
+     object-position: center;
+     object-fit: cover;
+}
+
+.titulo-user{
+     font-size: 25px;
+     margin-left: 50px;
+}
+
