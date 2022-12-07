@@ -8,6 +8,10 @@
      display: flex;
      justify-content: left;
      width: 75vw;
+     /* background-image: url("../../Fotos/fondo_nuevamascota.jpg");
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-attachment: fixed; */
 }
 
 .fondoP {

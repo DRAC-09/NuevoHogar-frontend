@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { useState } from 'react'
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -9,7 +10,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import './nuevamascota.css';
-import photo from '../../Fotos/pet2.png'
+import photo from '../../../Fotos/pet2.png'
 // import "bootstrap/dist/css/bootstrap.min.css";
 
 
@@ -49,7 +50,6 @@ function Copyright(props) {
 export default function Nuevamascota() {
   // Aqui se guardara el base64 de la imagen de la mascota
   const [imagen, setimagen] = useState("");
-  let abrirModal = false
 
 
   // Capturar Imagen y convertirla a Base64
@@ -75,7 +75,7 @@ export default function Nuevamascota() {
     }
     // console.log(mascota)
     
-    fetch("http://localhost:7777/mascota/agregar", {
+    fetch("https://nuevo-hogar-backend.vercel.app/mascota/agregar", {
       method: 'POST',
       body: JSON.stringify(mascota),
       headers: {
@@ -87,20 +87,22 @@ export default function Nuevamascota() {
     .then(data => {
       console.log(data)
       alert(data.mensaje)
-      window.location.href = "./nuevamascota"; 
+      window.location.href = "./usuario"; 
     })
     .catch(res => console.log(res));
     event.preventDefault();
   };
 
   return (
-    <div className="containe-fluid div-crearmascota" bgcolor="transparent">
+    <div className="containe-fluid div-crearmascota">
+      <p className='titulo'>Agregar Mascota</p>
+      <hr></hr>
       <ThemeProvider theme={theme}>
         <Container component="main" maxWidth="xs">
           <CssBaseline />
           <Box
             sx={{
-              marginTop: 8,
+              // marginTop: 8,
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
@@ -194,7 +196,7 @@ export default function Nuevamascota() {
             </Box>
           </Box>
         </Container>
-        <Copyright sx={{ mt: 5 } } />
+        {/* <Copyright sx={{ mt: 5 } } /> */}
       </ThemeProvider>
     </div>
   );  

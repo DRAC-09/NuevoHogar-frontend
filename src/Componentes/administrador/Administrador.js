@@ -6,7 +6,6 @@ const Administrador = () => {
 
      const [option, setOption] = useState();
      const [usuario, setUsuario] = useState();
-     const [mascotas, setMascotas] = useState([]);
      const id = JSON.parse(localStorage.getItem('user'));
 
      useEffect(() => {
@@ -30,21 +29,6 @@ const Administrador = () => {
           .catch(res => console.log(res));
      }
 
-     const obtenerMascotas = () => {
-          // Obtenermos las mascotas de la base de datos
-          fetch("https://nuevo-hogar-backend.vercel.app/mascota", {
-               method: 'GET',
-               headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-               }
-          })
-               .then(res => res.json())
-               .then(data => {
-                    setMascotas(data)
-               })
-               .catch(res => console.log(res));
-     }
 
      const selectOption = (opt) =>{
           setOption(opt)
@@ -56,7 +40,6 @@ const Administrador = () => {
           localStorage.clear();
           window.location.href = "./";
      }
-
 
 
      return (
@@ -84,6 +67,11 @@ const Administrador = () => {
                                    <p>Administradores</p>
                               </button>
 
+                              <button className='btn option' onClick={ () => selectOption("agregarMascota")}>
+                                   <i className="fa-solid fa-screwdriver-wrench font-icon"></i>
+                                   <p>+ Mascota</p>
+                              </button>
+
                               <button className='btn option' onClick={ () => selectOption("mascotas")}>
                                    <i className="fa-solid fa-paw font-icon"></i>
                                    <p>Macotas</p>
@@ -103,7 +91,6 @@ const Administrador = () => {
                     <BodyAdmin className="body" 
                          option={option}
                          user={usuario}
-                         pets={mascotas}
                     />
                </div>
           </div>

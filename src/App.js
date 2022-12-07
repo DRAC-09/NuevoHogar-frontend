@@ -16,7 +16,7 @@ import CambiarContrasena from './Componentes/cambioContrasena/CambiarContrasena'
 import Inicio from "./Componentes/inicio/Inicio";
 import InformacionPersonal from "./Componentes/informacionPersonal/InformacionPersonal";
 import EditarInfoPersonal from './Componentes/editarInfoPersonal/EditarInfoPersonal';
-import Nuevamascota from './Componentes/nuevaMascota/Nuevamascota';
+// import Nuevamascota from './Componentes/nuevaMascota/Nuevamascota';
 import NuevaActividad from './Componentes/nuevaActividad/NuevaActividad';
 import ModificarMascota from './Componentes/modificarMascota/ModificarMascota';
 import ModificarActividad from './Componentes/modificarActividad/ModificarActividad';
@@ -27,12 +27,12 @@ import Actss from './Componentes/pages/Actss';
 import Desaparecidoss from './Componentes/pages/Desaparecidoss';
 import Questions from './Componentes/pages/Questions'
 import Usuario from './Componentes/usuario/Usuario'
-import Administrador from './Componentes/administrador/Administrador'
+// import Administrador from './Componentes/administrador/Administrador'
 import Ap from './Componentes/pages/Ap'
 import WSPGallery from './Componentes/Listadovet/WSPGallery';
 import Donaciones from "./Componentes/donaciones/Donaciones";
 import AdoptarMascota from "./Componentes/adoptarMascota/AdoptarMascota";
-import Cliente from './Componentes/cliente/Cliente'
+// import Cliente from './Componentes/cliente/Cliente'
 
 function App() {
   return (
@@ -53,7 +53,7 @@ function App() {
             <Route path='/inicio' element={<Inicio/>}/>
             <Route path='/informacionPersonal' element ={<InformacionPersonal/>}/>
             <Route path='/editarInfoPersonal' element ={<EditarInfoPersonal/>}/>
-            <Route path='/nuevamascota' element ={<Nuevamascota/>}/>      
+            {/* <Route path='/nuevamascota' element ={<Nuevamascota/>}/>       */}
             <Route path='/nuevaActividad' element ={<NuevaActividad/>}/>
             <Route path='/modificaractividad' element ={<ModificarActividad/>}/>
             <Route path='/modificarmascota' element ={<ModificarMascota/>}/>
