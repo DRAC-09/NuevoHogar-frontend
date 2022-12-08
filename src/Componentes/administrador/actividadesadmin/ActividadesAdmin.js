@@ -115,7 +115,7 @@ const ActividadesAdmin = () => {
                </div>
 
                <Dialog open={open} onClose={handleClose} >
-                    <DialogTitle className="mod-text">Informacion</DialogTitle>
+                    <DialogTitle className="mod-text"><p>Datos</p></DialogTitle>
                     <Box component="form" noValidate onSubmit={agregarColaborador}>
                          <DialogContent className="dialog-colaborador">
 

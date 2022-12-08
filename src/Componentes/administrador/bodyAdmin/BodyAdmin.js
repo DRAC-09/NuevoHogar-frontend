@@ -38,7 +38,7 @@ const BodyAdmin = (props) => {
                               return <Perfil user={props.user}/>
                          default:
                               return <div>
-                                        actividades
+                                        <ActividadesAdmin/>
                                    </div>
                     }
                })()}
