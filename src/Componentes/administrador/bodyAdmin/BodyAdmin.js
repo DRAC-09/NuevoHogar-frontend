@@ -2,6 +2,7 @@ import React from 'react'
 import './bodyadmin.css'
 
 // Componentes
+import ActividadesAdmin from '../actividadesadmin/ActividadesAdmin'
 import ClientesLista from '../clienteslista/Clienteslista'
 import Colaboradores from '../../colaboradoresLista/ColaboradoresLista'
 import Administradoreslista from '../administradoreslista/Administradoreslista'
@@ -17,7 +18,7 @@ const BodyAdmin = (props) => {
                     switch (props.option) {
                          case 'actividades':
                               return <div>
-                                        actividades
+                                        <ActividadesAdmin/>
                                    </div>
                          case 'clientes':
                               return <div>
